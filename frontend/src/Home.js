@@ -4,6 +4,10 @@ import { FormControl, Stack, Button } from '@mui/material'
 
 const Home = ({setFlag}) => {
 
+  const setFlaggy = (tag) => {
+    setFlag(tag)
+  }
+
   return (
       <>
         <FormControl>
@@ -11,16 +15,16 @@ const Home = ({setFlag}) => {
               <div className="settings-subtext">Input your new exercise here!</div>
           </Stack>
             <br></br>
-            <Button variant="contained" onClick={setFlag("shoulders")}>Shoulders</Button>
-            <Button variant="contained" onClick={setFlag("triceps")}>Triceps</Button>
-            <Button variant="contained" onClick={setFlag("biceps")}>Biceps</Button>
-            <Button variant="contained" onClick={setFlag("push")}>Push</Button>
-            <Button variant="contained" onClick={setFlag("pull")}>Pull</Button>
-            <Button variant="contained" onClick={setFlag("chest")}>Chest</Button>
-            <Button variant="contained" onClick={setFlag("glutes")}>Glutes</Button>
-            <Button variant="contained" onClick={setFlag("quads")}>Quads</Button>
-            <Button variant="contained" onClick={setFlag("hamstrings")}>Hamstrings</Button>
-            <Button variant="contained" onClick={setFlag("legs")}>Legs</Button>
+            <Button variant="contained" onClick={setFlaggy("shoulders")}>Shoulders</Button>
+            {/* <Button variant="contained" onClick={setFlaggy("triceps")}>Triceps</Button>
+            <Button variant="contained" onClick={setFlaggy("biceps")}>Biceps</Button>
+            <Button variant="contained" onClick={setFlaggy("push")}>Push</Button>
+            <Button variant="contained" onClick={setFlaggy("pull")}>Pull</Button>
+            <Button variant="contained" onClick={setFlaggy("chest")}>Chest</Button>
+            <Button variant="contained" onClick={setFlaggy("glutes")}>Glutes</Button>
+            <Button variant="contained" onClick={setFlaggy("quads")}>Quads</Button>
+            <Button variant="contained" onClick={setFlaggy("hamstrings")}>Hamstrings</Button>
+            <Button variant="contained" onClick={setFlaggy("legs")}>Legs</Button> */}
         </FormControl>
       </>
   )

@@ -104,7 +104,9 @@ function App() {
       } else {
         workout.show = false
       }
+      return workout
     })
+    console.log(filteredWorkouts)
     setWorkouts(filteredWorkouts)
   }
 
