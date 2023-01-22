@@ -64,6 +64,7 @@ const Settings = ({ onAdd }) => {
       false, false, false, false, false
     ]);
     setSaveButtonDisabled(true);
+    document.querySelectorAll('input[type=radio]').forEach(el => el.checked = false)
   }
 
   return (
