@@ -17,6 +17,12 @@ function App() {
       tags: ["chest", "triceps", "push"]}    
   ])
 
+  const addWorkout = (workout) => {
+  
+    setWorkouts([...allWorkouts, workout])
+
+  }
+
   const showHideSettings = () => {
   
     setShowSettings(!showSettings)
@@ -26,8 +32,9 @@ function App() {
   return (
     <div className="App">
       <div>
-        <ResponsiveAppBar showSettings={showHideSettings}></ResponsiveAppBar>
-        {showSettings && <Settings />}
+        <ResponsiveAppBar showSettings={showHideSettings}
+                          ></ResponsiveAppBar>
+        {showSettings && <Settings onAdd={addWorkout}/>}
       </div>
     </div>
   );
