@@ -1,0 +1,223 @@
+[{
+    "name": "barbell bench",
+    "sets": "5",
+    "reps": "3-5",
+    "tags": ["chest", "triceps", "push"]
+},
+{
+    "name": "dumbell chest press",
+    "sets": "3",
+    "reps": "10-12",
+    "tags": ["chest", "triceps", "push"]
+},
+{
+    "name": "incline barbell bench",
+    "sets": "3",
+    "reps": "8-10",
+    "tags": ["chest", "triceps", "push"]
+},
+{
+    "name": "incline dumbbell chest press",
+    "sets": "3",
+    "reps": "10-12",
+    "tags": ["chest", "triceps", "push"]
+},
+{
+    "name": "pec fly",
+    "sets": "3",
+    "reps": "10-12",
+    "tags": ["chest", "triceps", "push"]
+},
+{
+    "name": "push ups",
+    "sets": "3",
+    "reps": "AMRAP",
+    "tags": ["chest", "triceps", "push"]
+},
+{
+    "name": "barbell military press",
+    "sets": "5",
+    "reps": "3-5",
+    "tags": ["shoulders", "push"]
+},
+{
+    "name": "dumbbell shoulder press",
+    "sets": "3",
+    "reps": "6-8",
+    "tags": ["shoulders", "push"]
+},
+{
+    "name": "arnold press",
+    "sets": "3",
+    "reps": "6-8",
+    "tags": ["shoulders", "push"]
+},
+{
+    "name": "lateral raise",
+    "sets": "3",
+    "reps": "10-12",
+    "tags": ["shoulders", "push"]
+},
+{
+    "name": "front raise",
+    "sets": "3",
+    "reps": "10-12",
+    "tags": ["shoulders", "push"]
+},
+{
+    "name": "tricep pushdown",
+    "sets": "3",
+    "reps": "10-12",
+    "tags": ["triceps", "push"]
+},
+{
+    "name": "overhead tricep extension",
+    "sets": "3",
+    "reps": "10-12",
+    "tags": ["triceps", "push"]
+},
+{
+    "name": "skullcrusher",
+    "sets": "3",
+    "reps": "10-12",
+    "tags": ["triceps", "push"]
+},
+{
+    "name": "tricep dip",
+    "sets": "3",
+    "reps": "AMRAP",
+    "tags": ["triceps", "push"]
+},
+{
+    "name": "underhand barbell row",
+    "sets": "5",
+    "reps": "3-5",
+    "tags": ["back", "biceps", "pull"]
+},
+{
+    "name": "overhand barbell row",
+    "sets": "5",
+    "reps": "3-5",
+    "tags": ["back", "biceps", "pull"]
+},
+{
+    "name": "single arm dumbbell row (per arm)",
+    "sets": "3",
+    "reps": "6-8",
+    "tags": ["back", "biceps", "pull"]
+},
+{
+    "name": "seated cable row",
+    "sets": "3",
+    "reps": "6-8",
+    "tags": ["back", "biceps", "pull"]
+},
+{
+    "name": "seated lat pulldown",
+    "sets": "3",
+    "reps": "6-8",
+    "tags": ["back", "biceps", "pull"]
+},
+{
+    "name": "standing cable bar lat pushdown",
+    "sets": "3",
+    "reps": "6-8",
+    "tags": ["back", "biceps", "pull"]
+},
+{
+    "name": "pull ups",
+    "sets": "3",
+    "reps": "AMRAP",
+    "tags": ["back", "biceps", "pull"]
+},
+{
+    "name": "face pulls",
+    "sets": "3",
+    "reps": "6-8",
+    "tags": ["back", "shoulders", "pull"]
+},
+{
+    "name": "rear delt fly",
+    "sets": "3",
+    "reps": "6-8",
+    "tags": ["back", "shoulders", "pull"]
+},
+{
+    "name": "bicep curls",
+    "sets": "3",
+    "reps": "10-12",
+    "tags": ["biceps", "pull"]
+},
+{
+    "name": "hammer curls",
+    "sets": "3",
+    "reps": "10-12",
+    "tags": ["biceps", "pull"]
+},
+{
+    "name": "conventional deadlift",
+    "sets": "5",
+    "reps": "3-5",
+    "tags": ["back", "hamstrings", "glutes", "pull", "legs"]
+},
+{
+    "name": "sumo deadlift",
+    "sets": "5",
+    "reps": "3-5",
+    "tags": ["hamstrings", "glutes", "legs"]
+},
+{
+    "name": "barbell back squats",
+    "sets": "5",
+    "reps": "3-5",
+    "tags": ["quads", "glutes", "legs"]
+},
+{
+    "name": "barbell front squats",
+    "sets": "5",
+    "reps": "3-5",
+    "tags": ["quads", "glutes", "legs"]
+},
+{
+    "name": "leg press",
+    "sets": "5",
+    "reps": "3-5",
+    "tags": ["quads", "glutes", "legs"]
+},
+{
+    "name": "romanian deadlifts",
+    "sets": "3",
+    "reps": "6-8",
+    "tags": ["hamstrings", "glutes", "legs"]
+},
+{
+    "name": "bulgarian split squats",
+    "sets": "3",
+    "reps": "6-8",
+    "tags": ["quads", "glutes", "legs"]
+},
+{
+    "name": "leg extension",
+    "sets": "3",
+    "reps": "10-12",
+    "tags": ["quads", "legs"]
+},
+{
+    "name": "leg curl",
+    "sets": "3",
+    "reps": "10-12",
+    "tags": ["hamstrings", "legs"]
+},
+{
+    "name": "hip thrust",
+    "sets": "5",
+    "reps": "3-5",
+    "tags": ["glutes", "legs"]
+},
+{
+    "name": "back extension",
+    "sets": "3",
+    "reps": "10-12",
+    "tags": ["glutes", "back", "pull", "legs"]
+}
+]
