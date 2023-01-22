@@ -33,7 +33,7 @@ const Settings = ({ onAdd }) => {
       <FormControl>
         <Stack spacing={2}>
           <div id="settings-title">Settings</div>
-          <div id="settings-subtest">Input your new exercise here!</div>
+          <div id="settings-subtext">Input your new exercise here!</div>
           <TextField id="outlined-basic name" label="Exercise Name" value={currName} onChange={(e) => setName(e.target.value)} />
           <TextField id="outlined-basic sets" label="Sets" value={currSets} onChange={(e) => setSets(e.target.value)} />
           <TextField id="outlined-basic reps" label="Reps" value={currReps} onChange={(e) => setReps(e.target.value)} />
