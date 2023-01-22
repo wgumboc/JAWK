@@ -8,23 +8,30 @@ const Home = ({setFlag}) => {
     setFlag(tag)
   }
 
+  const setExercise = (tag) => {
+    setFlaggy(tag)
+    alert('You selected ' + (tag) + '! Time to play WOULETTE')
+  }
+
   return (
       <>
         <FormControl>
           <Stack spacing={2}>
-              <div className="settings-subtext">Input your new exercise here!</div>
+            <div className="home-subtext">Select your area of focus!</div>
+            <Button variant="contained" onClick={setExercise("shoulders")}>Shoulders</Button>
+            <Button variant="contained" onClick={setExercise("triceps")}>Triceps</Button>
+            <Button variant="contained" onClick={setExercise("biceps")}>Biceps</Button>
+            <Button variant="contained" onClick={setExercise("push")}>Push</Button>
+            <Button variant="contained" onClick={setExercise("pull")}>Pull</Button>
+            <Button variant="contained" onClick={setExercise("chest")}>Chest</Button>
+            <Button variant="contained" onClick={setExercise("glutes")}>Glutes</Button>
+            <Button variant="contained" onClick={setExercise("quads")}>Quads</Button>
+            <Button variant="contained" onClick={setExercise("hamstrings")}>Hamstrings</Button>
+            <Button variant="contained" onClick={setExercise("legs")}>Legs</Button>
           </Stack>
-            <br></br>
-            <Button variant="contained" onClick={setFlaggy("shoulders")}>Shoulders</Button>
-            {/* <Button variant="contained" onClick={setFlaggy("triceps")}>Triceps</Button>
-            <Button variant="contained" onClick={setFlaggy("biceps")}>Biceps</Button>
-            <Button variant="contained" onClick={setFlaggy("push")}>Push</Button>
-            <Button variant="contained" onClick={setFlaggy("pull")}>Pull</Button>
-            <Button variant="contained" onClick={setFlaggy("chest")}>Chest</Button>
-            <Button variant="contained" onClick={setFlaggy("glutes")}>Glutes</Button>
-            <Button variant="contained" onClick={setFlaggy("quads")}>Quads</Button>
-            <Button variant="contained" onClick={setFlaggy("hamstrings")}>Hamstrings</Button>
-            <Button variant="contained" onClick={setFlaggy("legs")}>Legs</Button> */}
+            {/* <br></br> */}
+            {/* <Button variant="contained" onClick="location.href = " className="woulette-button">Time to Woulette</Button>
+            <button onclick="location.href = 'www.yoursite.com';" className="woulette-button" >Home</button> */}
         </FormControl>
       </>
   )
