@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import WorkoutCard from './WorkoutCard'
 
-const Roulette = () => {
+const Roulette = ({ allWorkouts }) => {
+
+  useEffect(() => {
+    console.log(allWorkouts)
+  })
+
   return (
-    <div>Roulette</div>
+    <>
+      <header className="roulette-header">WOULETTE</header>
+      <div className="roulette-page">
+        <div className="roulette-cards-container">
+          {allWorkouts.map((workout) => <WorkoutCard workout={workout}></WorkoutCard>)}
+        </div>
+      </div>
+    </>
   )
 }
 
