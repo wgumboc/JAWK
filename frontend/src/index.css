@@ -64,11 +64,11 @@ code {
   color: #576F72;
   font-weight: bold;
   font-size: 60px;
-  padding-top: 20px;
+  margin-top: 40px;
 }
 
 .settings-subtext {
   color: #576F72;
   font-size: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
