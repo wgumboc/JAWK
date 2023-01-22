@@ -1,24 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
-import Home from '../src/Home'
-import Settings from '../src/Settings'
+import Home from './Home'
+import Settings from './Settings'
+import { useState } from 'react'
 import ResponsiveAppBar from './ResponsiveAppBar';
-import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom'
 
 function App() {
+
+  const [showSettings, setShowSettings] = useState(false)
+
+  const [allWorkouts, setWorkouts] = useState([
+    {
+      reps: 10, 
+      sets: 3, 
+      name: "bench", 
+      tags: ["chest", "triceps", "push"]}    
+  ])
+
+  const showHideSettings = () => {
+  
+    setShowSettings(!showSettings)
+
+  }
+
   return (
     <div className="App">
-      <Router>
-        <div>
-          <ResponsiveAppBar></ResponsiveAppBar>
-
-          <Routes>
-              <Route exact path='/' element={<Home />}/>
-              <Route exact path='/settings' element={<Settings />}/>
-          </Routes>
-
-        </div>
-    </Router>
+      <div>
+        <ResponsiveAppBar showSettings={showHideSettings}></ResponsiveAppBar>
+        {showSettings && <Settings />}
+      </div>
     </div>
   );
 }
