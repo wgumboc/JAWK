@@ -12,6 +12,7 @@ function App() {
   const [showSettings, setShowSettings] = useState(false)
   const [showHome, setShowHome] = useState(true)
   const [showRoulette, setShowRoulette] = useState(false)
+  const [selectedWorkouts, setSelectedWorkouts] = useState([])
 
   const [allWorkouts, setWorkouts] = useState([{
     name: "barbell bench",
@@ -107,7 +108,8 @@ function App() {
       return workout
     })
     console.log(filteredWorkouts)
-    setWorkouts(filteredWorkouts)
+    filteredWorkouts.filter(workout => workout.show == true)
+    setSelectedWorkouts(filteredWorkouts)
   }
 
   const showHideSettings = () => {
@@ -143,7 +145,7 @@ function App() {
                           ></ResponsiveAppBar>
         {showHome && <Home setFlag={setFlag}></Home>}
         {showSettings && <Settings onAdd={addWorkout}/>}
-        {showRoulette && <Roulette className="roulette" allWorkouts={allWorkouts}></Roulette>}
+        {showRoulette && <Roulette className="roulette" selectedWorkouts={selectedWorkouts}></Roulette>}
       </div>
     </div>
   );

@@ -3,13 +3,13 @@ import WorkoutCard from './WorkoutCard'
 import Button from '@mui/material/Button'
 import {useState} from 'react'
 
-const Roulette = ({ allWorkouts }) => {
+const Roulette = ({ selectedWorkouts }) => {
 
   const [buttonPressed, setButtonPressed] = useState('')
   const [randomIndex, setRandomIndex] = useState(0)
 
   useEffect(() => {
-    console.log(allWorkouts)
+    console.log(selectedWorkouts[randomIndex])
   })
 
   const randomize = () => {
@@ -18,7 +18,7 @@ const Roulette = ({ allWorkouts }) => {
   }
 
   const randomIntFromInterval = () => {
-    return Math.floor(Math.random() * (allWorkouts.length - 1))
+    return Math.floor(Math.random() * (selectedWorkouts.length - 1))
   }
 
 
@@ -29,12 +29,12 @@ const Roulette = ({ allWorkouts }) => {
       <Button variant="contained" onClick={randomize}>Randomize</Button>
       {!buttonPressed && <div className="roulette-page">
         <div className="roulette-cards-container">
-          {allWorkouts.map((workout) => <WorkoutCard workout={workout}></WorkoutCard>)}
+          {selectedWorkouts.map((workout) => <WorkoutCard workout={workout}></WorkoutCard>)}
         </div>
       </div>}
       {buttonPressed && <div className="roulette-page">
         <div className="roulette-cards-container">
-          <WorkoutCard workout={allWorkouts[randomIndex]}></WorkoutCard>
+          <WorkoutCard workout={selectedWorkouts[randomIndex]}></WorkoutCard>
         </div>
       </div>}
     </>
