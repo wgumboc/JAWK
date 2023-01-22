@@ -35,7 +35,7 @@ const ResponsiveAppBar = ({ showSettings, showHome, showRoulette }) => {
   const pages = [{name: 'Home',
                 path: '/',
                 action: showHome},
-               {name: 'Settings',
+               {name: 'Create',
                 path: '/settings',
                 action: showSettings},
                {name: 'Woulette',
