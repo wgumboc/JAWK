@@ -17,73 +17,95 @@ function App() {
     name: "barbell bench",
     sets: "5",
     reps: "3-5",
-    tags: ["chest", "triceps", "push"]
+    tags: ["chest", "triceps", "push"],
+    show: true,
 },
 {
     name: "dumbell chest press",
     sets: "3",
     reps: "10-12",
-    tags: ["chest", "triceps", "push"]
+    tags: ["chest", "triceps", "push"],
+    show: true,
 },
 {
     name: "incline barbell bench",
     sets: "3",
     reps: "8-10",
-    tags: ["chest", "triceps", "push"]
+    tags: ["chest", "triceps", "push"],
+    show: true,
 },
 {
     name: "incline dumbbell chest press",
     sets: "3",
     reps: "10-12",
-    tags: ["chest", "triceps", "push"]
+    tags: ["chest", "triceps", "push"],
+    show: true,
 },
 {
     name: "pec fly",
     sets: "3",
     reps: "10-12",
-    tags: ["chest", "triceps", "push"]
+    tags: ["chest", "triceps", "push"],
+    show: true,
 },
 {
     name: "push ups",
     sets: "3",
     reps: "AMRAP",
-    tags: ["chest", "triceps", "push"]
+    tags: ["chest", "triceps", "push"],
+    show: true,
 },
 {
     name: "barbell military press",
     sets: "5",
     reps: "3-5",
-    tags: ["shoulders", "push"]
+    tags: ["shoulders", "push"],
+    show: true,
 },
 {
     name: "dumbbell shoulder press",
     sets: "3",
     reps: "6-8",
-    tags: ["shoulders", "push"]
+    tags: ["shoulders", "push"],
+    show: true,
 },
 {
     name: "arnold press",
     sets: "3",
     reps: "6-8",
-    tags: ["shoulders", "push"]
+    tags: ["shoulders", "push"],
+    show: true,
 },
 {
     name: "lateral raise",
     sets: "3",
     reps: "10-12",
-    tags: ["shoulders", "push"]
+    tags: ["shoulders", "push"],
+    show: true,
 },
 {
     name: "front raise",
     sets: "3",
     reps: "10-12",
-    tags: ["shoulders", "push"]
+    tags: ["shoulders", "push"],
+    show: true,
 }])
 
   const addWorkout = (workout) => {
   
     setWorkouts([...allWorkouts, workout])
 
+  }
+
+  const setFlag = (tag) => {
+    let filteredWorkouts = allWorkouts.map((workout) => {
+      if (workout.tags.includes(tag)) {
+        workout.show = true
+      } else {
+        workout.show = false
+      }
+    })
+    setWorkouts(filteredWorkouts)
   }
 
   const showHideSettings = () => {
@@ -117,7 +139,7 @@ function App() {
                           showHome={showHideHome}
                           showRoulette={showHideRoulette}
                           ></ResponsiveAppBar>
-        {showHome && <Home></Home>}
+        {showHome && <Home setFlag={setFlag}></Home>}
         {showSettings && <Settings onAdd={addWorkout}/>}
         {showRoulette && <Roulette className="roulette" allWorkouts={allWorkouts}></Roulette>}
       </div>

@@ -52,5 +52,9 @@ code {
 .roulette-header {
   color: rgb(125, 157, 156);
   font-size: 60px;
-  margin-top: 60px;
+  margin-top: 40px;
+}
+
+.randomize-button {
+  margin-top: 24px;
 }
