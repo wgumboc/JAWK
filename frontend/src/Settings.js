@@ -12,7 +12,8 @@ const Settings = ({ onAdd }) => {
       reps: currReps,
       sets: currSets,
       name: currName,
-      tags: currTags
+      tags: currTags,
+      show: true
     })
     resetState()
   }
