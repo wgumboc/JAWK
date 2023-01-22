@@ -2,20 +2,83 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './Home'
 import Settings from './Settings'
+import Roulette from './Roulette'
 import { useState } from 'react'
-import ResponsiveAppBar from './ResponsiveAppBar';
+import ResponsiveAppBar from './ResponsiveAppBar'
+import WorkoutData from './WorkoutData.js'
 
 function App() {
 
   const [showSettings, setShowSettings] = useState(false)
+  const [showHome, setShowHome] = useState(true)
+  const [showRoulette, setShowRoulette] = useState(false)
 
-  const [allWorkouts, setWorkouts] = useState([
-    {
-      reps: 10, 
-      sets: 3, 
-      name: "bench", 
-      tags: ["chest", "triceps", "push"]}    
-  ])
+  const [allWorkouts, setWorkouts] = useState([{
+    name: "barbell bench",
+    sets: "5",
+    reps: "3-5",
+    tags: ["chest", "triceps", "push"]
+},
+{
+    name: "dumbell chest press",
+    sets: "3",
+    reps: "10-12",
+    tags: ["chest", "triceps", "push"]
+},
+{
+    name: "incline barbell bench",
+    sets: "3",
+    reps: "8-10",
+    tags: ["chest", "triceps", "push"]
+},
+{
+    name: "incline dumbbell chest press",
+    sets: "3",
+    reps: "10-12",
+    tags: ["chest", "triceps", "push"]
+},
+{
+    name: "pec fly",
+    sets: "3",
+    reps: "10-12",
+    tags: ["chest", "triceps", "push"]
+},
+{
+    name: "push ups",
+    sets: "3",
+    reps: "AMRAP",
+    tags: ["chest", "triceps", "push"]
+},
+{
+    name: "barbell military press",
+    sets: "5",
+    reps: "3-5",
+    tags: ["shoulders", "push"]
+},
+{
+    name: "dumbbell shoulder press",
+    sets: "3",
+    reps: "6-8",
+    tags: ["shoulders", "push"]
+},
+{
+    name: "arnold press",
+    sets: "3",
+    reps: "6-8",
+    tags: ["shoulders", "push"]
+},
+{
+    name: "lateral raise",
+    sets: "3",
+    reps: "10-12",
+    tags: ["shoulders", "push"]
+},
+{
+    name: "front raise",
+    sets: "3",
+    reps: "10-12",
+    tags: ["shoulders", "push"]
+}])
 
   const addWorkout = (workout) => {
   
@@ -25,7 +88,25 @@ function App() {
 
   const showHideSettings = () => {
   
-    setShowSettings(!showSettings)
+    setShowSettings(true)
+    setShowHome(false)
+    setShowRoulette(false)
+
+  }
+
+  const showHideHome = () => {
+  
+    setShowSettings(false)
+    setShowHome(true)
+    setShowRoulette(false)
+
+  }
+
+  const showHideRoulette = () => {
+  
+    setShowSettings(false)
+    setShowHome(false)
+    setShowRoulette(true)
 
   }
 
@@ -33,8 +114,12 @@ function App() {
     <div className="App">
       <div>
         <ResponsiveAppBar showSettings={showHideSettings}
+                          showHome={showHideHome}
+                          showRoulette={showHideRoulette}
                           ></ResponsiveAppBar>
+        {showHome && <Home></Home>}
         {showSettings && <Settings onAdd={addWorkout}/>}
+        {showRoulette && <Roulette className="roulette" allWorkouts={allWorkouts}></Roulette>}
       </div>
     </div>
   );

@@ -12,9 +12,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import { Link, useNavigate } from 'react-router-dom';
 
-const ResponsiveAppBar = ({ showSettings }) => {
+const ResponsiveAppBar = ({ showSettings, showHome, showRoulette }) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -35,13 +34,13 @@ const ResponsiveAppBar = ({ showSettings }) => {
 
   const pages = [{name: 'Home',
                 path: '/',
-                action: handleCloseNavMenu},
+                action: showHome},
                {name: 'Settings',
                 path: '/settings',
                 action: showSettings},
                {name: 'Woulette',
                 path: '/roulette',
-                action: handleCloseNavMenu}];
+                action: showRoulette}];
 
     const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
