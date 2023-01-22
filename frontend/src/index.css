@@ -50,7 +50,7 @@ code {
 }
 
 .roulette-header {
-  color: #576F72;
+  color: #576f72;
   font-weight: bold;
   font-size: 60px;
   margin-top: 40px;
@@ -61,14 +61,30 @@ code {
 }
 
 .settings-title {
-  color: #576F72;
+  color: #576f72;
   font-weight: bold;
   font-size: 60px;
   margin-top: 40px;
 }
 
 .settings-subtext {
-  color: #576F72;
+  color: #576f72;
   font-size: 30px;
   padding-bottom: 20px;
+}
+
+.body-part-selection {
+  font-size: 24px;
+  margin-top: 40px;
+  border-radius: 10px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.home-subtext {
+  font-size: 24px;
+  margin-top: 40px;
+  border-radius: 10px;
+  line-height: 40px;
+  font-weight: bold;
 }

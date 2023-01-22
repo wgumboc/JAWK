@@ -1,38 +1,33 @@
 import React from 'react'
-import Settings from '../src/Settings'
 import { FormControl, Stack, Button } from '@mui/material'
+import {useState, useEffect} from 'react'
 
 const Home = ({setFlag}) => {
 
-  const setFlaggy = (tag) => {
-    setFlag(tag)
+  const [bodyPart, setBodyPart] = useState("push")
+
+  const flagger = (e) => {
+    setFlag(e.target.value)
+    setBodyPart(e.target.value)
   }
 
-  const setExercise = (tag) => {
-    setFlaggy(tag)
-    alert('You selected ' + (tag) + '! Time to play WOULETTE')
-  }
 
   return (
       <>
         <FormControl>
           <Stack spacing={2}>
             <div className="home-subtext">Select your area of focus!</div>
-            <Button variant="contained" onClick={setExercise("shoulders")}>Shoulders</Button>
-            <Button variant="contained" onClick={setExercise("triceps")}>Triceps</Button>
-            <Button variant="contained" onClick={setExercise("biceps")}>Biceps</Button>
-            <Button variant="contained" onClick={setExercise("push")}>Push</Button>
-            <Button variant="contained" onClick={setExercise("pull")}>Pull</Button>
-            <Button variant="contained" onClick={setExercise("chest")}>Chest</Button>
-            <Button variant="contained" onClick={setExercise("glutes")}>Glutes</Button>
-            <Button variant="contained" onClick={setExercise("quads")}>Quads</Button>
-            <Button variant="contained" onClick={setExercise("hamstrings")}>Hamstrings</Button>
-            <Button variant="contained" onClick={setExercise("legs")}>Legs</Button>
+            <Button variant="contained" value="shoulders" onClick={flagger}>Shoulders</Button>
+            <Button variant="contained" value="triceps" onClick={flagger}>Triceps</Button>
+            <Button variant="contained" value="biceps" onClick={flagger}>Biceps</Button>
+            <Button variant="contained" value="push" onClick={flagger}>Push</Button>
+            <Button variant="contained" value="pull" onClick={flagger}>Pull</Button>
+            <Button variant="contained" value="chest" onClick={flagger}>Chest</Button>
+            <Button variant="contained" value="hamstrings" onClick={flagger}>Hamstrings</Button>
+            <Button variant="contained" value="legs" onClick={flagger}>Legs</Button>
           </Stack>
-            {/* <br></br> */}
-            {/* <Button variant="contained" onClick="location.href = " className="woulette-button">Time to Woulette</Button>
-            <button onclick="location.href = 'www.yoursite.com';" className="woulette-button" >Home</button> */}
         </FormControl>
+        <div class="body-part-selection">Youve selected {bodyPart}! Go to Woulette to start!</div>
       </>
   )
 }
