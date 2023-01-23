@@ -16,6 +16,7 @@ const Home = ({setFlag}) => {
       <>
         <FormControl>
           <Stack spacing={2}>
+            <div className="home-subtext">Welcome to Workout Wroulette</div>
             <div className="home-subtext">Select your area of focus!</div>
             <Button variant="contained" value="shoulders" onClick={flagger}>Shoulders</Button>
             <Button variant="contained" value="triceps" onClick={flagger}>Triceps</Button>
@@ -27,7 +28,7 @@ const Home = ({setFlag}) => {
             <Button variant="contained" value="legs" onClick={flagger}>Legs</Button>
           </Stack>
         </FormControl>
-        <div class="body-part-selection">Youve selected {bodyPart}! Go to Woulette to start!</div>
+        <div class="body-part-selection">Youve selected {bodyPart}! Go to Wroulette to start!</div>
       </>
   )
 }

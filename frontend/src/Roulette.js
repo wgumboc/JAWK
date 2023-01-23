@@ -8,13 +8,9 @@ const Roulette = ({ selectedWorkouts }) => {
   const [buttonPressed, setButtonPressed] = useState('')
   const [randomIndex, setRandomIndex] = useState(0)
 
-  useEffect(() => {
-    console.log(selectedWorkouts[randomIndex])
-  })
-
   const randomize = () => {
     setButtonPressed(true)
-    randomIndex = setRandomIndex(randomIntFromInterval)
+    setRandomIndex(randomIntFromInterval)
   }
 
   const randomIntFromInterval = () => {
